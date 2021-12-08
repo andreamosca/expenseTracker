@@ -1,6 +1,6 @@
 import React from "react";
 
-import Expenses from "./components/Expenses";
+import Expenses from "src/components/Expenses/Expenses";
 
 function App() {
   const aExpenses = [

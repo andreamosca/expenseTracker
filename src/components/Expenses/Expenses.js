@@ -1,7 +1,7 @@
 import React from "react";
+import Card from "src/components/UI/Card";
 
 import ExpenseItem from "./ExpenseItem";
-import Card from "./Card";
 import "./Expenses.css";
 
 function Expenses(props) {
