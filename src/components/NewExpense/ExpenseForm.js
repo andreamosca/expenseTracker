@@ -3,25 +3,25 @@ import React, { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = () => {
-  // const [title, setTitle] = useState('');
-  // const [amount, setAmount] = useState('');
-  // const [date, setDate] = useState(new Date());
-  const [form, setForm] = useState({
-    "title": "",
-    "amount": "",
-    "date": new Date()
-  });
+  const [title, setTitle] = useState('');
+  const [amount, setAmount] = useState('');
+  const [date, setDate] = useState(new Date());
+  // const [form, setForm] = useState({
+  //   "title": "",
+  //   "amount": "",
+  //   "date": new Date()
+  // });
   const handleTitleChange = (oEvent) => {
-    // setForm({...form, title: oEvent.target.value});
-    setForm((prevState) => {
-      return {...prevState, title: oEvent.target.value}
-    });
+    setTitle(oEvent.target.value);
+    // setForm((prevState) => {
+    //   return {...prevState, title: oEvent.target.value}
+    // });
   };
   const handleAmountChange = (oEvent) => {
-    // setForm({...form, amount: oEvent.target.value});
+    setAmount(oEvent.target.value);
   };
   const handleDateChange = (oEvent) => {
-    // setForm({...form, date: new Date(oEvent.target.value)});
+    setDate(new Date(oEvent.target.value));
   };
 
   return (
