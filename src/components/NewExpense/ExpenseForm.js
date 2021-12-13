@@ -12,13 +12,16 @@ const ExpenseForm = () => {
     "date": new Date()
   });
   const handleTitleChange = (oEvent) => {
-    setForm({...form, title: oEvent.target.value});
+    // setForm({...form, title: oEvent.target.value});
+    setForm((prevState) => {
+      return {...prevState, title: oEvent.target.value}
+    });
   };
   const handleAmountChange = (oEvent) => {
-    setForm({...form, amount: oEvent.target.value});
+    // setForm({...form, amount: oEvent.target.value});
   };
   const handleDateChange = (oEvent) => {
-    setForm({...form, date: new Date(oEvent.target.value)}));
+    // setForm({...form, date: new Date(oEvent.target.value)});
   };
 
   return (
