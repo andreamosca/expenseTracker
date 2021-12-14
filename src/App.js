@@ -18,7 +18,9 @@ const App = () => {
   ]);
 
   const handleAddExpense = oExpense => {
-    setExpenses([...aExpenses, oExpense]);
+    setExpenses((prev) => {
+      return [...prev, oExpense];
+    });
   };
   return (
     <div>
