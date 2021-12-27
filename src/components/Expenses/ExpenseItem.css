@@ -34,6 +34,34 @@
     padding: 0.5rem;
     border-radius: 12px;
   }
+
+  .expense-item__delete {
+    width: 5rem;
+    cursor: pointer;
+    padding: 0.7rem 0.5rem;
+    border: 1px solid #40005d;
+    background-color: #40005d;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+  }
+  
+  .expense-item__delete:hover,
+  .expense-item__delete:active {
+    background-color: #510674;
+    border-color: #510674;
+  }
+  
+  .expense-item__delete.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  
+  .expense-item__delete.alternative:hover,
+  .expense-item__delete.alternative:active {
+    background-color: #ddb3f8;
+  }
   
   @media (min-width: 580px) {
     .expense-item__description {

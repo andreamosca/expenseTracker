@@ -19,12 +19,19 @@ const App = () => {
 
   const [aExpenses, setExpenses] = useState(DUMMY_EXPENSES);
 
-  const handleAddExpense = expense => setExpenses((prev) => [expense, ...prev]);
+  const handleAddExpense = expense => setExpenses(prev => [expense, ...prev]);
+  const handleDelete = expense => {
+    const confirm = window.confirm(`Sei sicuro di voler eliminare la spesa ${expense.title}?`);
+    if(!confirm){
+      return;
+    }
+    setExpenses(prev => prev.filter(item => item.id !== expense.id));
+  }
   
   return (
     <div>
       <NewExpense onAddExpense={handleAddExpense} />
-      <Expenses items={aExpenses}/>
+      <Expenses items={aExpenses} onDelete={handleDelete}/>
     </div>
   );
   
